@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import line from "../../img/line.svg"
 import graphs from "../../img/graphs.svg"
+import graphsMobile from "../../img/graphForMobile.svg"
 import circle2 from "../../img/circle2.png"
 import circle3 from "../../img/circle3.png"
 import doubleCircle from "../../img/doubleCircle.png"
 import s from './ScanDocOne.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
-import y from "../Main/Main.module.sass";
 
 export const ScanDocOne = () => {
 
@@ -21,7 +21,7 @@ export const ScanDocOne = () => {
                         <div className={s.goldenLineTop}></div>
                         <div className={s.goldenLineRight}></div>
                         <div className={s.goldenLineBottom}></div>
-                        <div className={s.title}><img src={line} alt="line"/>Сканирование документов</div>
+                        <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>Сканирование документов</div>
                         <div className={s.subTitle}>Быстрое сканирование бухгалтерской первичной документации, юридических и финансовых документов, анкет и бланков – сделайте свою работу быстрой и эффективной.</div>
                         <button className={s.standartBtnWhite}>Рассчитать ></button>
                     </div>
@@ -72,6 +72,8 @@ export const ScanDocOne = () => {
                     <h2 className={s.titleDetails}>
                         Подробности
                         <span>details</span>
+                        <div className={s.circleImgShowOnMobile}></div>
+
                     </h2>
                     <div className={s.textDelails}>
                         <div className={s.circleImg}></div>
@@ -97,7 +99,8 @@ export const ScanDocOne = () => {
                     <h4>Топ самых распространённых бухгалтерских документов, которые обычно подлежат оцифровке
                     </h4>
                     <div className={s.groupImages}>
-                        <img src={graphs} alt="graphs"/>
+                        <img className={s.graph} src={graphs} alt="graphs"/>
+                        <img className={s.graphShowOnMobile} src={graphsMobile} alt="graphs"/>
                         <img className={s.doubleCircle} src={doubleCircle} alt="img"/>
                         <img className={s.circle2} src={circle2} alt="img"/>
                         <img className={s.circle3} src={circle3} alt="img"/>

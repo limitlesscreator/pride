@@ -6,6 +6,10 @@ import injener from '../src/img/injener.pdf'
 import copyDocuments from '../src/img/copyDocuments.pdf'
 import scanDocuments from '../src/img/scanDocuments.pdf'
 import {ElectroArchiveSeven} from "./components/ElectroArchiveSeven/ElectroArchiveSeven";
+import {FourPerevozka} from "./components/FourPerevozka/FourPerevozka";
+import {TenDepozitSave} from "./components/TenDepozitSave/TenDepozitSave";
+import {Nine} from "./components/Nine/Nine";
+import {Eleven} from "./components/Eleven/Eleven";
 function App() {
 
   const onButtonClick = (image,name) => {
@@ -34,9 +38,15 @@ function App() {
     {/*<button style={{position: "absolute", top: '90px', right:0,}} onClick={() => {onButtonClick(scanDocuments, 'scan documents')}}>*/}
     {/*  scan documents*/}
     {/*</button>*/}
+
+
+    {/*<ElectroArchiveSeven/>*/}
     {/*<ScanDocOne/>*/}
-    <ElectroArchiveSeven/>
     {/*<Main/>*/}
+    {/*<FourPerevozka/>*/}
+    {/*<TenDepozitSave/>*/}
+    {/*<Nine/>*/}
+    <Eleven/>
   </>
   );
 }

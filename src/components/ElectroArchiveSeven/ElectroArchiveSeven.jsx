@@ -8,6 +8,7 @@ import cloudText1 from "../../img/cloudSaveText.svg";
 import cloud1 from "../../img/cloud1.png";
 import cloudText2 from "../../img/cloudSaveText2.svg";
 import cloud2 from "../../img/cloud2.png";
+import graphFirstCloud from "../../img/cloudSaverGraph.svg";
 
 export const ElectroArchiveSeven = () => {
 
@@ -21,7 +22,7 @@ export const ElectroArchiveSeven = () => {
                         <div className={s.goldenLineTop}></div>
                         <div className={s.goldenLineRight}></div>
                         <div className={s.goldenLineBottom}></div>
-                        <div className={s.title}><img src={line} alt="line"/>Электронный архив</div>
+                        <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>Электронный архив</div>
                         <div className={s.subTitle}>Виртуальное хранилище ценной информации. Создаем его на основе сканированных образов документов вашего бумажного архива, предоставляя вам возможность удаленного доступа, быстрого поиска и выгрузки данных.</div>
                         <button className={s.standartBtnWhite}>Рассчитать ></button>
                     </div>
@@ -55,6 +56,17 @@ export const ElectroArchiveSeven = () => {
 
                 </div>
             </div>
+
+            <div className={s.cloudSaver}>
+               <div className={s.container}>
+                   <h2 className={s.titleLeft}>
+                       Облачное хранилище
+                       <span>cloud storage</span>
+                   </h2>
+                   <img src={graphFirstCloud} className={s.graph} alt="graph"/>
+               </div>
+            </div>
+
             <div className={s.stageWork}>
                 <div className={s.container}>
                     <h2 className={s.titleLeft}>
