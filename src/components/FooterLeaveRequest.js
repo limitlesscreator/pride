@@ -44,6 +44,12 @@ export const FooterLeaveRequest = ({theme}) => {
                                 </select>
                             </div>
                         </div>
+                        <div style={{display: "block"}} className={theme === 'white' ? s.contactFieldsBlack : s.contactFields}>
+                            <div>Комментарий</div>
+                            <textarea name="comment" id="" cols="30" rows="10"></textarea>
+                        </div>
+
+
                         <button className={theme === 'white' ? s.standardBtnBlack : s.standardBtn} >Отправить ></button>
                     </div>
                 </form>

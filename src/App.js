@@ -10,6 +10,14 @@ import {FourPerevozka} from "./components/FourPerevozka/FourPerevozka";
 import {TenDepozitSave} from "./components/TenDepozitSave/TenDepozitSave";
 import {Nine} from "./components/Nine/Nine";
 import {Eleven} from "./components/Eleven/Eleven";
+import {Twelve} from "./components/Twelve/Twelve";
+import {Fourteen} from "./components/Fourteen/Fourteen";
+import {Thirteen} from "./components/ThirteenMain/Thirteen";
+import {Fifteen} from "./components/Fifteen/Fifteen";
+import {Eight} from "./components/Eight/Eight";
+import {Six} from "./components/Six/Six";
+import { Three} from "./components/Three/Three";
+import {Five} from "./components/Five/Five";
 function App() {
 
   const onButtonClick = (image,name) => {
@@ -46,7 +54,15 @@ function App() {
     {/*<FourPerevozka/>*/}
     {/*<TenDepozitSave/>*/}
     {/*<Nine/>*/}
-    <Eleven/>
+    {/*<Eleven/>*/}
+    {/*<Twelve/>*/}
+    {/*<Thirteen/>*/}
+    {/*<Fourteen/>*/}
+    {/*<Fifteen/>*/}
+    {/*<Eight/>*/}
+    {/*<Six/>*/}
+    {/*<Three/>*/}
+    <Five/>
   </>
   );
 }

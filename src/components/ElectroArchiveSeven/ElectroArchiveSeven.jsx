@@ -9,6 +9,9 @@ import cloud1 from "../../img/cloud1.png";
 import cloudText2 from "../../img/cloudSaveText2.svg";
 import cloud2 from "../../img/cloud2.png";
 import graphFirstCloud from "../../img/cloudSaverGraph.svg";
+import localseven from "../../img/localseven.svg";
+import graphsMobile from "../../img/sevenGraphOnMobile.svg";
+import sevenMobileLocal from "../../img/sevenMobileLocal.svg";
 
 export const ElectroArchiveSeven = () => {
 
@@ -58,12 +61,23 @@ export const ElectroArchiveSeven = () => {
             </div>
 
             <div className={s.cloudSaver}>
-               <div className={s.container}>
+               <div style={{overflow: 'hidden'}} className={s.container}>
                    <h2 className={s.titleLeft}>
                        Облачное хранилище
                        <span>cloud storage</span>
                    </h2>
                    <img src={graphFirstCloud} className={s.graph} alt="graph"/>
+                   <img className={s.graphShowOnMobile} src={graphsMobile} alt="graphs"/>
+               </div>
+            </div>
+            <div className={s.cloudSaver}>
+               <div style={{overflow: 'hidden'}} className={s.container}>
+                   <h2 style={{textAlign:'center'}} className={s.titleLeft}>
+                       ЛОКАЛЬНОЕ хранилище
+                       <span style={{textAlign:'center', display: 'block',width: '100%'}}>LOCAL storage</span>
+                   </h2>
+                   <img src={localseven} className={s.graph} alt="graph"/>
+                   <img className={s.graphShowOnMobileLocal} src={sevenMobileLocal} alt="graphs"/>
                </div>
             </div>
 
@@ -100,6 +114,25 @@ export const ElectroArchiveSeven = () => {
                             <div className={s.textStage}> Регулярное <br/> обслуживание</div>
                             <div className={s.number}>5</div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className={s.detailsRightPic}>
+                <div className={s.container}>
+                    <h2 className={s.titleDetails}>
+                        Подробности
+                        <span>details</span>
+                        <div className={s.circleImgShowOnMobile}></div>
+
+                    </h2>
+                    <div className={s.textDelails}>
+                        <div className={s.circleImg}></div>
+                        Мы оказываем услуги по установке и настройке цифрового архива из отсканированных копий документов вашего физического архива, позволяя вам получать удаленный доступ, эффективно осуществлять поиск необходимой информации и легко экспортировать данные. <div className={s.line}></div>
+                        <p className={s.additionalText}>
+                            Мы делаем акцент на индивидуальный подходе к каждому клиенту, безопасности данных и простоту дальнейшего доступа к документам.<br/><br/>
+                            Специалисты нашей компании встречаются с вами для понимания ваших потребностей, обсуждаем особенности документооборота и требования к электронному архивированию. Проводится аудит имеющейся системы управления документами, если таковая существует, чтобы выявить возможные векторы улучшения и интеграции.
+                        </p>
                     </div>
                 </div>
             </div>
