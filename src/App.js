@@ -18,17 +18,11 @@ import {Eight} from "./components/Eight/Eight";
 import {Six} from "./components/Six/Six";
 import { Three} from "./components/Three/Three";
 import {Five} from "./components/Five/Five";
+import {Two} from "./components/Two/Two";
+import {ComplexUslug} from "./components/ComplexUslug/ComplexUslug";
+import {Link, Route, Routes} from "react-router-dom";
 function App() {
 
-  const onButtonClick = (image,name) => {
-    const pdfUrl = image;
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = `${name}.pdf`; // specify the filename
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
 
   return (
 
@@ -47,22 +41,6 @@ function App() {
     {/*  scan documents*/}
     {/*</button>*/}
 
-
-    {/*<ElectroArchiveSeven/>*/}
-    {/*<ScanDocOne/>*/}
-    {/*<Main/>*/}
-    {/*<FourPerevozka/>*/}
-    {/*<TenDepozitSave/>*/}
-    {/*<Nine/>*/}
-    {/*<Eleven/>*/}
-    {/*<Twelve/>*/}
-    {/*<Thirteen/>*/}
-    {/*<Fourteen/>*/}
-    {/*<Fifteen/>*/}
-    {/*<Eight/>*/}
-    {/*<Six/>*/}
-    {/*<Three/>*/}
-    <Five/>
   </>
   );
 }

@@ -13,6 +13,9 @@ import localseven from "../../img/localseven.svg";
 import graphsMobile from "../../img/sevenGraphOnMobile.svg";
 import sevenMobileLocal from "../../img/sevenMobileLocal.svg";
 import pcvirsionfive from "../../img/pcvirsionfive.svg";
+import fiveSecondGraph from "../../img/fiveSecondGraph.svg";
+import mobileFiveFirst from "../../img/mobileFiveFirst.svg";
+import mobileFiveSecond from "../../img/mobileFiveSecond.svg";
 
 export const Five = () => {
 
@@ -106,7 +109,7 @@ export const Five = () => {
                         Оцифровка таких документов осуществляется для:
                     </h2>
                     <img src={pcvirsionfive} className={s.graph} alt="graph"/>
-                    <img className={s.graphShowOnMobile} src={graphsMobile} alt="graphs"/>
+                    <img className={s.graphShowOnMobile} src={mobileFiveFirst} alt="graphs"/>
                 </div>
             </div>
             <div className={s.cloudSaver}>
@@ -114,8 +117,8 @@ export const Five = () => {
                     <h2 style={{textAlign:'center'}} className={s.titleLeft}>
                         Топ распространённых документов, которые могут подлежать оцифровке:
                     </h2>
-                    <img src={localseven} className={s.graph} alt="graph"/>
-                    <img className={s.graphShowOnMobileLocal} src={sevenMobileLocal} alt="graphs"/>
+                    <img src={fiveSecondGraph} className={s.graph} alt="graph"/>
+                    <img className={s.graphShowOnMobileLocal} src={mobileFiveSecond} alt="graphs"/>
                 </div>
             </div>
 

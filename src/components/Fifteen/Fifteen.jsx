@@ -8,7 +8,8 @@ import doubleCircle from "../../img/doubleCircle.png"
 import s from './Fifteen.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
-
+import {onButtonClick} from "../../index";
+import injener from '../../img/injener.pdf'
 export const Fifteen = () => {
 
     return (
@@ -25,7 +26,7 @@ export const Fifteen = () => {
                         <div className={s.subTitle}>Печать чертежей, конструкторских документов и проектной документации, предназначенных для использования в строительстве, архитектуре и проектировании.
                             В нашем ассортименте имеются все утвержденные форматы А4, А3, А2, А1, А0, а также индивидуальные размеры А3х3, А3х4, А2х3, А2х4, А1х3 и многие другие материалы.
                             </div>
-                        <button className={s.standartBtnWhite}>Скачать прайс ></button>
+                        <button onClick={() => onButtonClick(injener, 'ИНЖЕНЕРНАЯ ПЕЧАТЬ')} className={s.standartBtnWhite}>Скачать прайс ></button>
                     </div>
                 </div>
             </div>

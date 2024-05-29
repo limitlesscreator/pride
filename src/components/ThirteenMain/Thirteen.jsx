@@ -8,6 +8,8 @@ import doubleCircle from "../../img/doubleCircle.png"
 import s from './Thirteen.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
+import {onButtonClick} from "../../index";
+import copyDocuments from "../../img/copyDocuments.pdf";
 
 export const Thirteen = () => {
 
@@ -23,7 +25,7 @@ export const Thirteen = () => {
                         <div className={s.goldenLineBottom}></div>
                         <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>кОПИРОВАНИЕ Документов</div>
                         <div className={s.subTitle}>Осуществляем копирование документов всех стандартных размеров (А4, А3, А2, А1, А0) и нестандартных (А3х3, А3х4, А2х3, А2х4, А1х3 и так далее). Мы производим высококачественное копированием с использованием материалов от ведущих производителей, обеспечивающих долгосрочную сохранность вашей продукции. </div>
-                        <button className={s.standartBtnWhite}>Скачать прайс ></button>
+                        <button className={s.standartBtnWhite}  onClick={() => onButtonClick(copyDocuments, 'КОПИРОВАНИЕ Документов')}>Скачать прайс ></button>
                     </div>
                 </div>
             </div>

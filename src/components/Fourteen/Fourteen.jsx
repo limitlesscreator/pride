@@ -8,6 +8,8 @@ import doubleCircle from "../../img/doubleCircle.png"
 import s from './Fourteen.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
+import {onButtonClick} from "../../index";
+import fullPrice from "../../img/fullPrice.pdf";
 
 export const Fourteen = () => {
 
@@ -23,7 +25,7 @@ export const Fourteen = () => {
                         <div className={s.goldenLineBottom}></div>
                         <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>пОСТПЕЧАТНАЯ ОБРАБОТКА</div>
                         <div className={s.subTitle}>Постпечатная обработка — критически важный этап в создании высококачественной печатной продукции, который определяет её конечный вид и пользовательские качества.  <br className={s.brHideOnMobile}/><br className={s.brHideOnMobile}/><br className={s.brHideOnMobile}/><br className={s.brHideOnMobile}/> </div>
-                        <button className={s.standartBtnWhite}>Скачать прайс ></button>
+                        <button className={s.standartBtnWhite}  onClick={() => onButtonClick(fullPrice, 'ПОЛНЫЙ ПРАЙС')}>Скачать прайс ></button>
                     </div>
                 </div>
             </div>

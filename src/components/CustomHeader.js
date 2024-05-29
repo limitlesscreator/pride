@@ -5,6 +5,13 @@ import contactUs from "../img/contactUs.svg";
 import {CustomModal} from "./Modal/CustomModal";
 import logo from "../img/logo.svg";
 import navImg from "../img/navImg.svg";
+import {Link} from "react-router-dom";
+import injener from '../img/injener.pdf'
+import copyDocuments from '../img/copyDocuments.pdf'
+import scanDocuments from '../img/scanDocuments.pdf'
+import {onButtonClick} from "../index";
+
+
 
 export const CustomHeader = () => {
     const [showNavBar, setShowNavBar] = useState(false)
@@ -14,52 +21,49 @@ export const CustomHeader = () => {
                 <div className={s.sidebar}
                      style={showNavBar ? {right: '0'} : {right: '-100%'}}>
                     <div className={s.menuElems}>
-                        <div>Главная</div>
+                        <Link style={{textDecoration: 'none', color: 'white',}} to={'/'} >
+                            <div>Главная</div>
+                        </Link>
                         <div className="dropstart">
                             <div data-bs-toggle="dropdown"
                                  aria-expanded="false">
                                 <img className={s.goldArrow} src={goldArrowLeft} alt="icon"/>Услуги
                             </div>
                             <ul className="dropdown-menu">
-                                <a href="">Cканирование документов</a>
-                                <a href="">Широкоформатное сканирование</a>
-                                <a href="">Опись, сверка и инвентаризация</a>
-                                <a href="">Сканирование книг</a>
-                                <a href="">Бесконтактное сканирование</a>
-                                <a href="">Электронный архив</a>
-                                <a href="">Индексация документов</a>
-                                <a href="">Уничтожение документов</a>
-                                <a href="">Депозитарное хранение</a>
-                                <a href="">Консалтинговые услуги</a>
-                                <a href="">Подготовка и сдача дел в госархив</a>
-                                <a href="">Перевозка архива</a>
-                                <a href="">Копирование</a>
-                                <a href="">Постпечатная обработка</a>
-                                <a href="">Инженерная печать</a>
+                                <Link to={'/'} >Cканирование документов</Link>
+                                <Link to={'/wide-format-scanning'} >Широкоформатное сканирование</Link>
+                                <Link to={'/reconciliation-stocktaking'} >Опись, сверка и инвентаризация</Link>
+                                <Link to={'/scanning-books'} >Сканирование книг</Link>
+                                <Link to={'/non-contact-scanning'} >Бесконтактное сканирование</Link>
+                                <Link to={'/electronic-archive'} >Электронный архив</Link>
+                                <Link to={'/document-indexing'} >Индексация документов</Link>
+                                <Link to={'/document-destruction'} >Уничтожение документов</Link>
+                                <Link to={'/depositary-custody'} >Депозитарное хранение</Link>
+                                <Link to={'/consulting-services'} >Консалтинговые услуги</Link>
+                                <Link to={'/state-archives'} >Подготовка и сдача дел в госархив</Link>
+                                <Link to={'/archive-transportation'} >Перевозка архива</Link>
+                                <Link to={'/copy-documents'} >Копирование</Link>
+                                <Link to={'/print-processing'} >Постпечатная обработка</Link>
+                                <Link to={'/engineering-print'} >Инженерная печать</Link>
                             </ul>
                         </div>
-                        <div className="dropstart">
-                            <div data-bs-toggle="dropdown"
-                                 aria-expanded="false">
-                                <img className={s.goldArrow} src={goldArrowLeft} alt="icon"/>Комплекс услуг
+                        <Link style={{color: 'white', textDecoration: 'none'}} to={'/range-services'}>
+                            <div className="dropstart">
+                                <div
+                                    aria-expanded="false">
+                                    Комплекс услуг
+                                </div>
                             </div>
-                            <ul className="dropdown-menu">
-                                <a href="">Базовый</a>
-                                <a href="">Оцифровка</a>
-                                <a href="">Ликвидация</a>
-                                <a href="">Переезд</a>
+                        </Link>
 
-                            </ul>
-                        </div>
                         <div className="dropstart">
                             <div data-bs-toggle="dropdown"
                                  aria-expanded="false">
                                 <img className={s.goldArrow} src={goldArrowLeft} alt="icon"/>Электронный архив
                             </div>
                             <ul className="dropdown-menu">
-                                <a href="">Облачное хранилище</a>
-                                <a href="">Локальное хранилище</a>
-
+                                <Link to={'/electronic-archive'}>Облачное хранилище</Link>
+                                <Link to={'/electronic-archive'}>Локальное хранилище</Link>
                             </ul>
                         </div>
                         <div>Расчет стоимости</div>
@@ -69,9 +73,9 @@ export const CustomHeader = () => {
                                 <img className={s.goldArrow} src={goldArrowLeft} alt="icon"/>Скачать <br/> прайс
                             </div>
                             <ul className="dropdown-menu">
-                                <a href="">Сканирование документов</a>
-                                <a href="">Инженерная печать</a>
-                                <a href="">Копирование документов</a>
+                                <a  onClick={() => onButtonClick(scanDocuments, 'Сканирование документов')} href="#">Сканирование документов</a>
+                                <a  onClick={() => onButtonClick(injener, 'Инженерная печать')} href="#">Инженерная печать</a>
+                                <a  onClick={() => onButtonClick(copyDocuments, 'Копирование документов')} href="#">Копирование документов</a>
 
                             </ul>
                         </div>

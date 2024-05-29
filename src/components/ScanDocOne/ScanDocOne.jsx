@@ -8,6 +8,8 @@ import doubleCircle from "../../img/doubleCircle.png"
 import s from './ScanDocOne.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
+import {onButtonClick} from "../../index";
+import scanDocuments from "../../img/scanDocuments.pdf";
 
 export const ScanDocOne = () => {
 
@@ -23,7 +25,7 @@ export const ScanDocOne = () => {
                         <div className={s.goldenLineBottom}></div>
                         <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>Сканирование документов</div>
                         <div className={s.subTitle}>Быстрое сканирование бухгалтерской первичной документации, юридических и финансовых документов, анкет и бланков – сделайте свою работу быстрой и эффективной.</div>
-                        <button className={s.standartBtnWhite}>Рассчитать ></button>
+                        <button className={s.standartBtnWhite}  onClick={() => onButtonClick(scanDocuments, 'Сканирование документов')}>Рассчитать ></button>
                     </div>
                 </div>
             </div>
