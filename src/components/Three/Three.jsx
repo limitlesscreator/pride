@@ -8,6 +8,8 @@ import doubleCircle from "../../img/doubleCircle.png"
 import s from './Three.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
+import {onButtonClick} from "../../index";
+import scanDocuments from "../../img/scanDocuments.pdf";
 
 export const Three = () => {
 
@@ -21,9 +23,9 @@ export const Three = () => {
                         <div className={s.goldenLineTop}></div>
                         <div className={s.goldenLineRight}></div>
                         <div className={s.goldenLineBottom}></div>
-                        <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>Опись, сверка и инвентаризация</div>
+                        <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>Опись, сверка <br/>и инвентаризация</div>
                         <div className={s.subTitle}>Производим опись и сверку документов, индексируя их по заданным параметрам и вводя атрибуты в ваш электронный архив или документооборот. Кроме того, мы составляем подробные Excel-реестры для удобного и эффективного управления вашими данными. </div>
-                        <button className={s.standartBtnWhite}>Скачать прайс ></button>
+                        <button onClick={() => onButtonClick(scanDocuments, 'Сканирование документов')} className={s.standartBtnWhite}>Скачать прайс ></button>
                     </div>
                 </div>
             </div>

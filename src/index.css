@@ -12,12 +12,13 @@
 .dropdown-menu{
   background: #0E2943;
   color: white;
-  padding-left: 20px;
   box-sizing: border-box !important;
   border: none;
   border-radius: 0;
   position: relative;
   right: -2px !important;
+  overflow: auto;
+  height: 100vh;
 }
 
 .dropdown-menu div{
@@ -28,7 +29,7 @@
   text-decoration: none;
   color: white;
   display: inline-block;
-  padding: 10px 5px 0 0  ;
+  padding: 10px 5px 10px 20px  ;
   font-weight: 200;
 }
 

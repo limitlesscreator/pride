@@ -136,7 +136,9 @@
   text-transform: uppercase
   position: relative
   img
-    margin-right: 50px
+    position: relative
+    left: -50px
+
   @media (max-width: 1350px)
 
   @media (max-width: 1200px)
@@ -182,7 +184,11 @@
   border-radius: 25px
   border: none
   display: block
-
+  &:hover
+    border: solid 1px white
+    color: white
+    background: black
+    transition: 0.5s
 .stageWork
   padding-top: 240px
   padding-bottom: 120px

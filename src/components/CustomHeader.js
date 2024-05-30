@@ -10,6 +10,7 @@ import injener from '../img/injener.pdf'
 import copyDocuments from '../img/copyDocuments.pdf'
 import scanDocuments from '../img/scanDocuments.pdf'
 import {onButtonClick} from "../index";
+import '../App.css'
 
 
 
@@ -21,7 +22,7 @@ export const CustomHeader = () => {
                 <div className={s.sidebar}
                      style={showNavBar ? {right: '0'} : {right: '-100%'}}>
                     <div className={s.menuElems}>
-                        <Link style={{textDecoration: 'none', color: 'white',}} to={'/'} >
+                        <Link style={{textDecoration: 'none', color: 'white',}} to={'/scan-documents'} >
                             <div>Главная</div>
                         </Link>
                         <div className="dropstart">
@@ -29,22 +30,22 @@ export const CustomHeader = () => {
                                  aria-expanded="false">
                                 <img className={s.goldArrow} src={goldArrowLeft} alt="icon"/>Услуги
                             </div>
-                            <ul className="dropdown-menu">
-                                <Link to={'/'} >Cканирование документов</Link>
-                                <Link to={'/wide-format-scanning'} >Широкоформатное сканирование</Link>
-                                <Link to={'/reconciliation-stocktaking'} >Опись, сверка и инвентаризация</Link>
-                                <Link to={'/scanning-books'} >Сканирование книг</Link>
-                                <Link to={'/non-contact-scanning'} >Бесконтактное сканирование</Link>
-                                <Link to={'/electronic-archive'} >Электронный архив</Link>
-                                <Link to={'/document-indexing'} >Индексация документов</Link>
-                                <Link to={'/document-destruction'} >Уничтожение документов</Link>
-                                <Link to={'/depositary-custody'} >Депозитарное хранение</Link>
-                                <Link to={'/consulting-services'} >Консалтинговые услуги</Link>
-                                <Link to={'/state-archives'} >Подготовка и сдача дел в госархив</Link>
-                                <Link to={'/archive-transportation'} >Перевозка архива</Link>
-                                <Link to={'/copy-documents'} >Копирование</Link>
-                                <Link to={'/print-processing'} >Постпечатная обработка</Link>
-                                <Link to={'/engineering-print'} >Инженерная печать</Link>
+                            <ul className="dropdown-menu hoverForMenu">
+                                <Link className={s.hoverForMenu} id={'our'} to={'/scan-documents'} >Cканирование документов</Link>
+                                <Link className={s.hoverForMenu} to={'/wide-format-scanning'} >Широкоформатное сканирование</Link>
+                                <Link className={s.hoverForMenu} to={'/reconciliation-stocktaking'} >Опись, сверка и инвентаризация</Link>
+                                <Link className={s.hoverForMenu} to={'/scanning-books'} >Сканирование книг</Link>
+                                <Link className={s.hoverForMenu} to={'/non-contact-scanning'} >Бесконтактное сканирование</Link>
+                                <Link className={s.hoverForMenu} to={'/electronic-archive'} >Электронный архив</Link>
+                                <Link className={s.hoverForMenu} to={'/document-indexing'} >Индексация документов</Link>
+                                <Link className={s.hoverForMenu} to={'/document-destruction'} >Уничтожение документов</Link>
+                                <Link className={s.hoverForMenu} to={'/depositary-custody'} >Депозитарное хранение</Link>
+                                <Link className={s.hoverForMenu} to={'/consulting-services'} >Консалтинговые услуги</Link>
+                                <Link className={s.hoverForMenu} to={'/state-archives'} >Подготовка и сдача дел в госархив</Link>
+                                <Link className={s.hoverForMenu} to={'/archive-transportation'} >Перевозка архива</Link>
+                                <Link className={s.hoverForMenu} to={'/copy-documents'} >Копирование</Link>
+                                <Link className={s.hoverForMenu} to={'/print-processing'} >Постпечатная обработка</Link>
+                                <Link className={s.hoverForMenu} to={'/engineering-print'} >Инженерная печать</Link>
                             </ul>
                         </div>
                         <Link style={{color: 'white', textDecoration: 'none'}} to={'/range-services'}>
@@ -62,8 +63,8 @@ export const CustomHeader = () => {
                                 <img className={s.goldArrow} src={goldArrowLeft} alt="icon"/>Электронный архив
                             </div>
                             <ul className="dropdown-menu">
-                                <Link to={'/electronic-archive'}>Облачное хранилище</Link>
-                                <Link to={'/electronic-archive'}>Локальное хранилище</Link>
+                                <Link className={s.hoverForMenu} to={'/electronic-archive#cloudSaver'}>Облачное хранилище</Link>
+                                <Link className={s.hoverForMenu} to={'/electronic-archive#localSaver'}>Локальное хранилище</Link>
                             </ul>
                         </div>
                         <div>Расчет стоимости</div>
@@ -73,15 +74,15 @@ export const CustomHeader = () => {
                                 <img className={s.goldArrow} src={goldArrowLeft} alt="icon"/>Скачать <br/> прайс
                             </div>
                             <ul className="dropdown-menu">
-                                <a  onClick={() => onButtonClick(scanDocuments, 'Сканирование документов')} href="#">Сканирование документов</a>
-                                <a  onClick={() => onButtonClick(injener, 'Инженерная печать')} href="#">Инженерная печать</a>
-                                <a  onClick={() => onButtonClick(copyDocuments, 'Копирование документов')} href="#">Копирование документов</a>
+                                <a className={s.hoverForMenu} onClick={() => onButtonClick(scanDocuments, 'Сканирование документов')} href="#">Сканирование документов</a>
+                                <a className={s.hoverForMenu} onClick={() => onButtonClick(injener, 'Инженерная печать')} href="#">Инженерная печать</a>
+                                <a className={s.hoverForMenu} onClick={() => onButtonClick(copyDocuments, 'Копирование документов')} href="#">Копирование документов</a>
 
                             </ul>
                         </div>
                     </div>
                     <div className={s.contactUs}>
-                        Оставить <br/> заявку <img className={s.imgContact} src={contactUs} alt="img"/>
+                        <Link to={'#footer'} style={{textDecoration: 'none', color: 'white'}}>Оставить <br/> заявку</Link> <img className={s.imgContact} src={contactUs} alt="img"/>
                     </div>
                 </div>
                 <CustomModal isOpen={openModalLogin} onClose={() => {setOpenModalLogin(false)}}>
@@ -89,7 +90,7 @@ export const CustomHeader = () => {
                 <div className={s.container}>
                     <header>
                         <div style={{display: "flex"}}>
-                            <img src={logo} alt="logo"/>
+                            <Link to={'/'} style={{display: 'flex', alignItems: 'center'}}><img src={logo} alt="logo"/></Link>
                             <div className={s.flexElems}>
                                 <div style={{textAlign: 'center'}}>
                                     <a className={s.number} href="tel:+84959709745">+7 (495) 970 97 45</a> <br/>
@@ -108,9 +109,9 @@ export const CustomHeader = () => {
                 </div>
 
                 <div className={s.mobileHeader}>
-                    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                    <nav style={{backgroundColor: 'rgba(255, 255, 255, 0.8)'}}  className="navbar navbar-expand-lg">
                         <div className="container-fluid">
-                            <a className="navbar-brand" href="#">PRIDE</a>
+                            <Link className="navbar-brand" to="/">PRIDE</Link>
                             <div>
                                 <button onClick={() => setOpenModalLogin(true)} className={s.login}>Войти</button>
                                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -120,55 +121,51 @@ export const CustomHeader = () => {
                                 </button>
                             </div>
                             <div className="collapse navbar-collapse" id="navbarNav">
-                                <ul className="navbar-nav">
-                                    <li className="nav-item">
-                                        <a className="nav-link" href="#">Главная</a>
+                                <div className="navbar-nav">
+                                    <li  className="nav-item">
+                                        <Link to={'/'} className="nav-link" href="#">Главная</Link>
                                     </li>
-                                    <li className="nav-item">
+                                    <li  className="nav-item">
                                         <button className={`${s.btnOwn}  dropdown-toggle`} data-bs-toggle="dropdown"
                                                 aria-expanded="false">
                                             Услуги
                                         </button>
-                                        <ul className="dropdown-menu dropdown-menu-dark">
-                                            <li><a href="">Cканирование документов</a></li>
-                                            <li><a href="">Широкоформатное сканирование</a></li>
-                                            <li><a href="">Опись, сверка и инвентаризация</a></li>
-                                            <li><a href="">Сканирование книг</a></li>
-                                            <li><a href="">Бесконтактное сканирование</a></li>
-                                            <li><a href="">Электронный архив</a></li>
-                                            <li><a href="">Индексация документов</a></li>
-                                            <li><a href="">Уничтожение документов</a></li>
-                                            <li><a href="">Депозитарное хранение</a></li>
-                                            <li><a href="">Консалтинговые услуги</a></li>
-                                            <li><a href="">Подготовка и сдача дел в госархив</a></li>
-                                            <li><a href="">Перевозка архива</a></li>
-                                            <li><a href="">Копирование</a></li>
-                                            <li><a href="">Постпечатная обработка</a></li>
-                                            <li><a href="">Инженерная печать</a></li>
+                                        <ul  style={{height: '100%', filter: 'invert(100%)'}} className="dropdown-menu dropdown-menu-dark ">
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} id={'our'} to={'/scan-documents'} >Cканирование документов</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/wide-format-scanning'} >Широкоформатное сканирование</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/reconciliation-stocktaking'} >Опись, сверка и инвентаризация</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/scanning-books'} >Сканирование книг</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/non-contact-scanning'} >Бесконтактное сканирование</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/electronic-archive'} >Электронный архив</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/document-indexing'} >Индексация документов</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/document-destruction'} >Уничтожение документов</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/depositary-custody'} >Депозитарное хранение</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/consulting-services'} >Консалтинговые услуги</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/state-archives'} >Подготовка и сдача дел в госархив</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/archive-transportation'} >Перевозка архива</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/copy-documents'} >Копирование</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/print-processing'} >Постпечатная обработка</Link>
+                                            <Link style={{display: 'block'}} className={s.hoverForMenu} to={'/engineering-print'} >Инженерная печать</Link>
                                         </ul>
                                     </li>
                                     <li className="nav-item">
-                                        <button className={`${s.btnOwn}  dropdown-toggle`} data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                            Комплекс Услуг
-                                        </button>
-                                        <ul className="dropdown-menu dropdown-menu-dark">
-                                            <li><a href="">Базовый</a></li>
-                                            <li><a href="">Оцифровка</a></li>
-                                            <li> <a href="">Ликвидация</a></li>
-                                            <li> <a href="">Переезд</a></li>
-                                        </ul>
+                                        <Link to={'/range-services'}>
+                                            <button className={`${s.btnOwn} `}>
+                                                Комплекс Услуг
+                                            </button>
+                                        </Link>
+
                                     </li>
-                                    <li className="nav-item">
+                                    <li  className="nav-item">
                                         <button className={`${s.btnOwn}  dropdown-toggle`} data-bs-toggle="dropdown"
                                                 aria-expanded="false">
                                             Электронный архив
                                         </button>
-                                        <ul className="dropdown-menu dropdown-menu-dark">
+                                        <ul  style={{height: '100%',filter: 'invert(100%)'}} className="dropdown-menu dropdown-menu-dark">
 
 
-                                            <li><a href="">Облачное хранилище</a></li>
-                                            <li> <a href="">Локальное хранилище</a></li>
+                                            <li><Link  style={{display: 'block'}} className={s.hoverForMenu} to={'/electronic-archive#cloudSaver'} >Облачное хранилище</Link></li>
+                                            <li> <Link   style={{display: 'block'}} className={s.hoverForMenu} to={'/electronic-archive#localSaver'} >Локальное хранилище</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item">
@@ -178,7 +175,7 @@ export const CustomHeader = () => {
                                     <li className="nav-item">
                                         <a className="nav-link" href="#">Оставить заявку</a>
                                     </li>
-                                </ul>
+                                </div>
                             </div>
                         </div>
                     </nav>

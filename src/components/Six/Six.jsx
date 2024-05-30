@@ -8,6 +8,8 @@ import doubleCircle from "../../img/doubleCircle.png"
 import s from './Six.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
+import {onButtonClick} from "../../index";
+import scanDocuments from "../../img/scanDocuments.pdf";
 
 export const Six = () => {
 
@@ -23,7 +25,7 @@ export const Six = () => {
                         <div className={s.goldenLineBottom}></div>
                         <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>Бесконтактное сканирование</div>
                         <div className={s.subTitle}>Мы оцифровываем уникальные старинные книги, карты, газеты и журналы с особой тщательностью и точностью, чтобы сохранить их для будущих поколений <br className={s.brHideOnMobile}/> <br className={s.brHideOnMobile}/><br className={s.brHideOnMobile}/> <br className={s.brHideOnMobile}/> </div>
-                        <button className={s.standartBtnWhite}>Скачать прайс ></button>
+                        <button onClick={() => onButtonClick(scanDocuments, 'Сканирование документов')}  className={s.standartBtnWhite}>Скачать прайс ></button>
                     </div>
                 </div>
             </div>

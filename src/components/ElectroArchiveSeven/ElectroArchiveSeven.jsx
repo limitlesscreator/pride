@@ -12,11 +12,14 @@ import graphFirstCloud from "../../img/cloudSaverGraph.svg";
 import localseven from "../../img/localseven.svg";
 import graphsMobile from "../../img/sevenGraphOnMobile.svg";
 import sevenMobileLocal from "../../img/sevenMobileLocal.svg";
+import ScrollToAnchor from "../AnchorComponent";
 
 export const ElectroArchiveSeven = () => {
 
     return (
         <>
+            <ScrollToAnchor/>
+
            <CustomHeader/>
             <div className={s.section1}>
                 <div id={'leftStyle'} className={s.imgSection}></div>
@@ -38,7 +41,7 @@ export const ElectroArchiveSeven = () => {
                         <span>digital archive</span>
                     </h2>
 
-                    <div className={y.cloudSavers}>
+                    <div  className={y.cloudSavers}>
 
                         <div className={y.cloud}>
                             <img className={y.cloudText} src={cloudText1} alt="cloud"/>
@@ -60,7 +63,7 @@ export const ElectroArchiveSeven = () => {
                 </div>
             </div>
 
-            <div className={s.cloudSaver}>
+            <div id={'cloudSaver'}  className={s.cloudSaver}>
                <div style={{overflow: 'hidden'}} className={s.container}>
                    <h2 className={s.titleLeft}>
                        Облачное хранилище
@@ -70,7 +73,7 @@ export const ElectroArchiveSeven = () => {
                    <img className={s.graphShowOnMobile} src={graphsMobile} alt="graphs"/>
                </div>
             </div>
-            <div className={s.cloudSaver}>
+            <div  id={'localSaver'} className={s.cloudSaver}>
                <div style={{overflow: 'hidden'}} className={s.container}>
                    <h2 style={{textAlign:'center'}} className={s.titleLeft}>
                        ЛОКАЛЬНОЕ хранилище

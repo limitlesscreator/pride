@@ -155,6 +155,16 @@ li:before
   font-size: 43px
   vertical-align: sub
   line-height: 43px
+  @media (max-width: 1350px)
+
+  @media (max-width: 1200px)
+
+  @media (max-width: 900px)
+    display: none
+
+  @media (max-width: 760px)
+
+  @media (max-width: 480px)
 
 
 .special_section1
@@ -322,7 +332,11 @@ li:before
 .card
   width: 267px
   position: relative
+  opacity: 0.7
+  transition: 0.5s
 
+  position: relative
+  top: 0px
   @media (max-width: 1350px)
     margin: 0 20px 20px
   @media (max-width: 1200px)
@@ -332,7 +346,11 @@ li:before
   @media (max-width: 760px)
 
   @media (max-width: 480px)
-
+  &:hover
+    opacity: 1
+    transition: 0.5s
+    position: relative
+    top: -20px
 .overImg
   position: absolute
   bottom: 0
@@ -375,7 +393,11 @@ li:before
   border-radius: 25px
   border: none
   display: block
-
+  &:hover
+    border: solid 1px white
+    color: white
+    background: black
+    transition: 0.5s
 .stageWork
   padding-top: 240px
   padding-bottom: 120px

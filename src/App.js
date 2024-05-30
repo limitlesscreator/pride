@@ -21,6 +21,8 @@ import {Five} from "./components/Five/Five";
 import {Two} from "./components/Two/Two";
 import {ComplexUslug} from "./components/ComplexUslug/ComplexUslug";
 import {Link, Route, Routes} from "react-router-dom";
+import ScrollToAnchor from "./components/AnchorComponent";
+import React from "react";
 function App() {
 
 

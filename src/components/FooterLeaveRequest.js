@@ -2,6 +2,7 @@ import React, {useRef} from 'react';
 import s from "./Main/Main.module.sass";
 import logo from "../img/logo.svg";
 import * as emailjs from "@emailjs/browser";
+import {Link} from "react-router-dom";
 
 export const FooterLeaveRequest = ({theme}) => {
 
@@ -19,13 +20,13 @@ export const FooterLeaveRequest = ({theme}) => {
 
 
     return (
-        <footer>
+        <footer >
             <div style={theme === 'white' ? {background: "white", color: 'black'} : {}} className={s.leaveRequest}>
                 <form ref={form} onSubmit={sendEmail}>
                     <div className={s.container}>
                         <h2 style={theme === 'white' ? {color: 'black'} : {}}  className={s.titleGoldSecond}>
                             <div style={theme === 'white' ? {color: 'black'} : {}}  className={s.specialTextRight}>
-                                Не стесняйтесь оставлять контакты, мы свяжемся и поможем выбрать услугу и рассчитать цену
+                                Мы свяжемся и поможем выбрать услугу и рассчитать цену
                             </div>
                             Оставить заявку
                             <span>leave a request</span>
@@ -45,7 +46,7 @@ export const FooterLeaveRequest = ({theme}) => {
                             </div>
                         </div>
                         <div style={{display: "block"}} className={theme === 'white' ? s.contactFieldsBlack : s.contactFields}>
-                            <div>Комментарий</div>
+                            <div style={{margin: '0 auto'}}>Комментарий</div>
                             <textarea name="comment" id="" cols="30" rows="10"></textarea>
                         </div>
 
@@ -56,7 +57,7 @@ export const FooterLeaveRequest = ({theme}) => {
             </div>
             <img src={logo} alt="logo"/>
             <div className={s.footerElems}>
-                <a href="#">Услуги</a>
+                <Link to="/#services">Услуги</Link>
                 <a href="#">Комплекс</a>
                 <a href="#">Электронный архив</a>
             </div>
@@ -67,7 +68,7 @@ export const FooterLeaveRequest = ({theme}) => {
                     <div>info@pride-archive.ru</div>
                 </div>
             </div>
-            <div className={s.footerElems}>
+            <div id={'footer'} className={s.footerElems}>
                 <a href="#">Скачать прайс</a>
                 <a href="#">Расчет стоимости</a>
                 <a href="#">Оставить заявку</a>

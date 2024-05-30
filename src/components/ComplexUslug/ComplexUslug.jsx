@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import line from "../../img/line.svg"
 
 import uslug1 from "../../img/uslug1.png"
@@ -10,8 +10,13 @@ import arrowTopYellow from "../../img/arrowTopYellow.svg"
 import s from './ComplexUslug.module.sass'
 import {CustomHeader} from "../CustomHeader";
 import {FooterLeaveRequest} from "../FooterLeaveRequest";
+import {Link} from "react-router-dom";
 
 export const ComplexUslug = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <>
@@ -24,21 +29,21 @@ export const ComplexUslug = () => {
                     </h2>
                     <div className={s.cardsSection}>
                             <div className={s.card}>
-                                <a href="#"><img src={uslug1} alt="img"/></a>
+                                <a href={'#base'}><img src={uslug1} alt="img"/></a>
                             </div>
                             <div className={s.card}>
-                                <a href="#"><img src={uslug2} alt="img"/></a>
+                                <a href={"#scanning-books"}><img src={uslug2} alt="img"/></a>
                             </div>
                             <div className={s.card}>
-                                <a href="#"><img src={uslug3} alt="img"/></a>
+                                <a href={"#liquidation"}><img src={uslug3} alt="img"/></a>
                             </div>
                             <div className={s.card}>
-                                <a href="#"><img src={uslug4} alt="img"/></a>
+                                <a href={"#relocation"}><img src={uslug4} alt="img"/></a>
                             </div>
                     </div>
                 </div>
             </div>
-            <div className={s.section1}>
+            <div id={'base'} className={s.section1}>
                 <div id={'rightStyle'} className={s.imgSection}></div>
                 <div className={s.container}>
                     <div className={s.rightSection}>
@@ -48,7 +53,7 @@ export const ComplexUslug = () => {
                         <div className={s.subTitle}>
 
                             <ul className={s.specialLi}>
-                                <li>  Выделение документов для униятожения</li>
+                                <li>  Выделение документов для уничтожения</li>
                                 <li>          Уничтожение документов</li>
                                 <li>Оцифровка массива архивных документов</li>
                                 <li>Создание описи</li>
@@ -63,7 +68,7 @@ export const ComplexUslug = () => {
                 </div>
             </div>
             {/*integration RightSide*/}
-            <div className={s.special_section1}>
+            <div id={'scanning-books'} className={s.special_section1}>
                 <div id={'leftStyle'} className={s.special_imgSection1}></div>
                 <div className={s.container}>
                     <div className={s.actual_rightSection}>
@@ -84,17 +89,17 @@ export const ComplexUslug = () => {
                     </div>
                 </div>
             </div>
-            <div className={s.section1}>
+            <div id={'liquidation'} className={s.section1}>
                 <div id={'rightStyle'} className={s.imgSection3}></div>
                 <div className={s.container}>
                     <div className={s.rightSection}>
                         <div className={s.goldenLineTop}></div>
                         <div className={s.goldenLineRight}></div>
-                        <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>базовый </div>
+                        <div className={s.title}><img src={line} className={s.lineImgToHide} alt="line"/>ликвидация </div>
                         <div className={s.subTitle}>
 
                             <ul className={s.specialLi}>
-                                <li>Выделение документов для униятожения</li>
+                                <li>Выделение документов для уничтожения</li>
                                 <li>Уничтожение документов</li>
                                 <li>Оцифровка массива архивных документов</li>
                                 <li> Создание описи</li>
@@ -120,7 +125,7 @@ export const ComplexUslug = () => {
                     </div>
                 </div>
             </div>
-            <div className={s.special_section4}>
+            <div id={'relocation'} className={s.special_section4}>
                 <div id={'leftStyle'} className={s.special_imgSection4}></div>
                 <div className={s.container}>
                     <div className={s.actual_rightSection}>

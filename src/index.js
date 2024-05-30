@@ -25,6 +25,7 @@ import {Five} from "./components/Five/Five";
 import {FourPerevozka} from "./components/FourPerevozka/FourPerevozka";
 import {Three} from "./components/Three/Three";
 import {Two} from "./components/Two/Two";
+import ScrollToAnchor from "./components/AnchorComponent";
  export const onButtonClick = (image,name) => {
     const pdfUrl = image;
     const link = document.createElement("a");
