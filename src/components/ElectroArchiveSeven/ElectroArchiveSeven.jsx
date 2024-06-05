@@ -43,20 +43,24 @@ export const ElectroArchiveSeven = () => {
 
                     <div  className={y.cloudSavers}>
 
-                        <div className={y.cloud}>
-                            <img className={y.cloudText} src={cloudText1} alt="cloud"/>
-                            <img src={cloud1} alt="img"/>
-                            <div>Облачное хранение документов обеспечивает доступ к данным с любого устройства, и
-                                повышает их защиту с помощью резервных копий на удаленных серверах.
+                        <a   style={{cursor: 'pointer', textDecoration: 'none'}} href="#cloudSaver">
+                            <div className={y.cloud}>
+                                <img className={y.cloudText} src={cloudText1} alt="cloud"/>
+                                <img src={cloud1} alt="img"/>
+                                <div>Облачное хранение документов обеспечивает доступ к данным с любого устройства, и
+                                    повышает их защиту с помощью резервных копий на удаленных серверах.
+                                </div>
                             </div>
-                        </div>
-                        <div className={y.cloud}>
-                            <img className={y.cloudText} src={cloudText2} alt="cloud"/>
-                            <img src={cloud2} alt="img"/>
-                            <div>Локальное хранилище обеспечивает безопасное хранение данных
-                                с ограниченным доступом, защищая документы от внешних угроз.
+                        </a>
+                        <a style={{cursor: 'pointer', textDecoration: 'none'}} href="#localSaver">
+                            <div className={y.cloud}>
+                                <img className={y.cloudText} src={cloudText2} alt="cloud"/>
+                                <img src={cloud2} alt="img"/>
+                                <div>Локальное хранилище обеспечивает безопасное хранение данных
+                                    с ограниченным доступом, защищая документы от внешних угроз.
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
 

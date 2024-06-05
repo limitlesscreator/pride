@@ -7,6 +7,7 @@ import logo from "../img/logo.svg";
 import navImg from "../img/navImg.svg";
 import {Link} from "react-router-dom";
 import injener from '../img/injener.pdf'
+import fullPrice from '../img/fullPrice.pdf'
 import copyDocuments from '../img/copyDocuments.pdf'
 import scanDocuments from '../img/scanDocuments.pdf'
 import {onButtonClick} from "../index";
@@ -77,7 +78,7 @@ export const CustomHeader = () => {
                                 <a className={s.hoverForMenu} onClick={() => onButtonClick(scanDocuments, 'Сканирование документов')} href="#">Сканирование документов</a>
                                 <a className={s.hoverForMenu} onClick={() => onButtonClick(injener, 'Инженерная печать')} href="#">Инженерная печать</a>
                                 <a className={s.hoverForMenu} onClick={() => onButtonClick(copyDocuments, 'Копирование документов')} href="#">Копирование документов</a>
-
+                                <a style={{width: '100%'}} className={s.hoverForMenu} onClick={() => onButtonClick(fullPrice, 'Полный прайс')} href="#">Полный прайс <br/></a>
                             </ul>
                         </div>
                     </div>

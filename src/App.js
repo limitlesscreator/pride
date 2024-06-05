@@ -23,6 +23,7 @@ import {ComplexUslug} from "./components/ComplexUslug/ComplexUslug";
 import {Link, Route, Routes} from "react-router-dom";
 import ScrollToAnchor from "./components/AnchorComponent";
 import React from "react";
+import {Calculator} from "./components/Calculator/Calculator";
 function App() {
 
 
@@ -42,7 +43,6 @@ function App() {
     {/*<button style={{position: "absolute", top: '90px', right:0,}} onClick={() => {onButtonClick(scanDocuments, 'scan documents')}}>*/}
     {/*  scan documents*/}
     {/*</button>*/}
-
   </>
   );
 }

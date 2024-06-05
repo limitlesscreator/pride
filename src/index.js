@@ -26,6 +26,7 @@ import {FourPerevozka} from "./components/FourPerevozka/FourPerevozka";
 import {Three} from "./components/Three/Three";
 import {Two} from "./components/Two/Two";
 import ScrollToAnchor from "./components/AnchorComponent";
+import {Calculator} from "./components/Calculator/Calculator";
  export const onButtonClick = (image,name) => {
     const pdfUrl = image;
     const link = document.createElement("a");
@@ -105,6 +106,10 @@ const router = createBrowserRouter([{
 {
     path: 'reconciliation-stocktaking',
     element:  <Three/>
+},
+{
+    path: 'calculator',
+    element:  <Calculator/>
 }
 ])
 
