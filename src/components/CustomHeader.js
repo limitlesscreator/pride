@@ -23,7 +23,7 @@ export const CustomHeader = () => {
                 <div className={s.sidebar}
                      style={showNavBar ? {right: '0'} : {right: '-100%'}}>
                     <div className={s.menuElems}>
-                        <Link style={{textDecoration: 'none', color: 'white',}} to={'/scan-documents'} >
+                        <Link style={{textDecoration: 'none', color: 'white',}} to={'/'} >
                             <div>Главная</div>
                         </Link>
                         <div className="dropstart">
